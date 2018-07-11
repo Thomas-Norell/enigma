@@ -42,16 +42,35 @@ class rotor:
     def setPosition(self, num):
         self.index = num
         self.rotateCount = num #Does this get set to zero or to num? A specific engima rotor design question
+one = {}
+two = {}
+three = {}
+four = {}
+five = {}
+a = {}
+b = {}
+c = {}
+for l in range(len(letters)):
+    one[letters[l]] = 'EKMFLGDQVZNTOWYHXUSPAIBRCJ'[l]
+    two[letters[l]] = 'AJDKSIRUXBLHWTMCQGZNPYFVOE'[l]
+    three[letters[l]] = 'BDFHJLCPRTXVZNYEIWGAKMUSQO'[l]
+    four[letters[l]] = 'ESOVPZJAYQUIRHXLNFTGKDCMWB'[l]
+    five[letters[l]] = 'VZBRGITYUPSDNHLXAWMJQOFECK'[l]
+    a[letters[l]] = 'EJMZALYXVBWFCRQUONTSPIKHGD'[l]
+    b[letters[l]] = 'YRUHQSLDPXNGOKMIEBFZCWVJAT'[l]
+    c[letters[l]] = 'FVPJIAOYEDRZXWGCTKUQSBNMHL'[l]
 
-rotorOne = rotor({'A': 'E', 'B' : 'K', 'C' : 'M', 'D': 'F', 'E' : 'L', 'F' : 'G', 'G' : 'D', 'H' : 'Q', 'I' : 'V', 'J' : 'Z', 'K' : 'N', 'L' : 'T', 'M' : 'O', 'N' : 'W', 'O' : 'Y', 'P' : 'H', 'Q' : 'X', 'R' : 'U', 'S' : 'S', 'T' : 'P', 'U' : 'A' , 'V' : 'I', 'W' : 'B', 'X' : 'R', 'Y' : 'C', 'Z' : 'J'})
-rotorTwo = rotor({'A': 'A', 'B' : 'J', 'C' : 'D', 'D': 'K', 'E' : 'S', 'F' : 'I', 'G' : 'R', 'H' : 'U', 'I' : 'X', 'J' : 'B', 'K' : 'L', 'L' : 'H', 'M' : 'W', 'N' : 'T', 'O' : 'M', 'P' : 'C', 'Q' : 'Q', 'R' : 'G', 'S' : 'Z', 'T' : 'N', 'U' : 'P' , 'V' : 'Y', 'W' : 'F', 'X' : 'V', 'Y' : 'O', 'Z' : 'E'})
-rotorThree = rotor({'A': 'B', 'B' : 'D', 'C' : 'F', 'D': 'H', 'E' : 'J', 'F' : 'L', 'G' : 'C', 'H' : 'P', 'I' : 'R', 'J' : 'T', 'K' : 'X', 'L' : 'V', 'M' : 'Z', 'N' : 'N', 'O' : 'Y', 'P' : 'E', 'Q' : 'I', 'R' : 'W', 'S' : 'G', 'T' : 'A', 'U' : 'K' , 'V' : 'M', 'W' : 'U', 'X' : 'S', 'Y' : 'Q', 'Z' : 'O'})
-rotorFour = rotor({'A': 'E', 'B' : 'S', 'C' : 'O', 'D': 'V', 'E' : 'P', 'F' : 'Z', 'G' : 'J', 'H' : 'A', 'I' : 'Y', 'J' : 'Q', 'K' : 'U', 'L' : 'I', 'M' : 'R', 'N' : 'H', 'O' : 'X', 'P' : 'L', 'Q' : 'N', 'R' : 'F', 'S' : 'T', 'T' : 'G', 'U' : 'K' , 'V' : 'D', 'W' : 'C', 'X' : 'M', 'Y' : 'W', 'Z' : 'B'})
-rotorFive = rotor({'A': 'V', 'B' : 'Z', 'C' : 'B', 'D': 'R', 'E' : 'G', 'F' : 'I', 'G' : 'T', 'H' : 'Y', 'I' : 'U', 'J' : 'P', 'K' : 'S', 'L' : 'D', 'M' : 'N', 'N' : 'H', 'O' : 'L', 'P' : 'X', 'Q' : 'A', 'R' : 'W', 'S' : 'M', 'T' : 'J', 'U' : 'Q' , 'V' : 'O', 'W' : 'F', 'X' : 'E', 'Y' : 'C', 'Z' : 'K'})
-reflectorB = rotor({'A': 'Y', 'B' : 'R', 'C' : 'U', 'D': 'H', 'E' : 'Q', 'F' : 'S', 'G' : 'L', 'H' : 'D', 'I' : 'P', 'J' : 'X', 'K' : 'N', 'L' : 'G', 'M' : 'O', 'N' : 'K', 'O' : 'M', 'P' : 'I', 'Q' : 'E', 'R' : 'B', 'S' : 'F', 'T' : 'Z', 'U' : 'C' , 'V' : 'W', 'W' : 'V', 'X' : 'J', 'Y' : 'A', 'Z' : 'T'})
-reflectorC = rotor({'A': 'F', 'B' : 'V', 'C' : 'P', 'D': 'J', 'E' : 'I', 'F' : 'A', 'G' : 'O', 'H' : 'Y', 'I' : 'E', 'J' : 'D', 'K' : 'R', 'L' : 'Z', 'M' : 'X', 'N' : 'W', 'O' : 'G', 'P' : 'C', 'Q' : 'T', 'R' : 'K', 'S' : 'U', 'T' : 'Q', 'U' : 'S' , 'V' : 'B', 'W' : 'N', 'X' : 'M', 'Y' : 'H', 'Z' : 'L'})
+rotorOne = rotor(one)
+rotorTwo = rotor(two)
+rotorThree = rotor(three)
+rotorFour = rotor(four)
+rotorFive = rotor(five)
+
+reflectorA = rotor(a)
+reflectorB = rotor(b)
+reflectorC = rotor(c)
 rotors = [rotorOne, rotorTwo, rotorThree, rotorFour, rotorFive]
-reflectors = [reflectorB, reflectorC]
+reflectors = [reflectorA, reflectorB, reflectorC]
 
 
 class enigma:
