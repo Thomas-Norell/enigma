@@ -50,6 +50,7 @@ five = {}
 a = {}
 b = {}
 c = {}
+#https://en.wikipedia.org/wiki/Enigma_rotor_details#Rotor_wiring_tables
 for l in range(len(letters)):
     one[letters[l]] = 'EKMFLGDQVZNTOWYHXUSPAIBRCJ'[l]
     two[letters[l]] = 'AJDKSIRUXBLHWTMCQGZNPYFVOE'[l]
